@@ -1,0 +1,2 @@
+# game-project
+Description: Once the game has started, the game will display 3 cards faced up.(1 king and 2 jokers) Player must keep track of the king. The cards will be randomized. The player will then choose which card/position that they think the king is. If the player is successful and chooses the right card, they will advance to the next round. As the round goes up, so will the speed of randomizing and cards that are displayed.
