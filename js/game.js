@@ -38,11 +38,36 @@ $(document).ready(() => {
     f6: "",
   }
   const coordinates = Object.keys(grid)
+  let player = {
+    lives: 3,
+    score: 0
+  }
+
 
   //button functionality
   $('td').on('click', (e) => {
-
+    let selected = e.target.id
+    let value = grid[selected]
+    if (value == "bomb") {
+      if(player.lives <= 1) {
+        alert('game Over')
+        //reset game
+      }
+      player.lives -= 1
+    } else if (value == "heart") {
+      if (player.lives < 3) {
+        player.lives += 1
+      }
+    } else {
+      if (player.score < 10) {
+        player.score += 1
+      } else {
+        alert("round won")
+      }
+    }
+    displayAttr()
   })
+
 let placeBomb = () => {
   let counter = 1
   while(counter <= 5) {
@@ -64,6 +89,15 @@ placeBomb()
 placeHeart()
 console.log(grid);
 
+let displayAttr = () => {
+  $('#stats').remove()
+  let display = "<div id='stats'>"
+  display += "Score: " + player.score
+  display += " Lives: " + player.lives
+  display += "</div>"
+  $('#container-bg').append(display)
+}
+displayAttr()
 
 
 
