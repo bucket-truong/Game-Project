@@ -40,26 +40,40 @@ $(document).ready(() => {
   const coordinates = Object.keys(grid)
   let player = {
     lives: 3,
-    score: 0
+    score: 0,
+    clicked: []
   }
 
 
   //button functionality
   $('td').on('click', (e) => {
     let selected = e.target.id
+    //check if the button was clicked already
+
+      //alert, button already clicked
+
+    // if not clicked
+      //add selected to clicked array
+
+
     let value = grid[selected]
     if (value == "bomb") {
+      $('#' + selected).css("background-color", "red")
+
       if(player.lives <= 1) {
-        alert('game Over')
-        //reset game
+        alert('Bomb Hit, You Lose')
+        reset()
       }
       player.lives -= 1
     } else if (value == "heart") {
+      $('#' + selected).css("background-color", "pink")
+
       if (player.lives < 3) {
         player.lives += 1
       }
     } else {
       if (player.score < 10) {
+        $('#' + selected).css("background-color", "#00af14")
         player.score += 1
       } else {
         alert("round won")
@@ -70,7 +84,7 @@ $(document).ready(() => {
 
 let placeBomb = () => {
   let counter = 1
-  while(counter <= 5) {
+  while(counter <= 6) {
     let randomCoord = coordinates[Math.floor(Math.random() * coordinates.length)]
     grid[randomCoord] = "bomb"
     counter++
@@ -80,7 +94,7 @@ placeBomb()
 
   let placeHeart = () => {
     let counter = 1
-    while (counter <= 2) {
+    while (counter <= 3) {
       let randomCoord = coordinates[Math.floor(Math.random() * coordinates.length)]
       grid[randomCoord] = "heart"
       counter++
@@ -93,14 +107,22 @@ let displayAttr = () => {
   $('#stats').remove()
   let display = "<div id='stats'>"
   display += "Score: " + player.score
-  display += " Lives: " + player.lives
+  display += "<br /> Lives: " + player.lives
   display += "</div>"
   $('#container-bg').append(display)
 }
 displayAttr()
 
+$('#restart').on('click',() => {
+  reset()
+})
+
+let reset = () => {
+  location.reload()
+}
 
 
+//
 
 
 

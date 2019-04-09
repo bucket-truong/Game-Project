@@ -13,7 +13,7 @@ td:hover {
   padding-top:40px;
 }
 #container-bg {
-  background-color: grey;
+  background-color:#a09f9f;
   width:40%;
   width:30%;
   margin:auto;
@@ -22,4 +22,42 @@ td:hover {
   text-align: center;
   height: 50px;
   font-size:40px;
+  font-family: 'Orbitron', sans-serif;
+}
+button {
+  background-color: #00af14;
+  border-radius: 30px;
+  font-size: 20px;
+  top:22px;
+  left: 37%;
+  position:relative;
+  font-family: 'Orbitron', sans-serif;
+  border-color: black;
+  height:22px;
+  animation: shadow-pulse 1.5s infinite;
+}
+button:hover {
+  background-color: #15771f;
+  color: white;
+}
+#stats {
+  font-family: 'Orbitron', sans-serif;
+  text-align:center;
+  position:relative;
+  bottom: 30px;
+}
+@keyframes shadow-pulse {
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+     }
+}
+#rules {
+  width: 170px;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  font-family: 'Orbitron', sans-serif;
 }
