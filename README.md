@@ -1,2 +1,5 @@
 # game-project
-Description: Once the game has started, the game will display 3 cards faced up.(1 king and 2 jokers) Player must keep track of the king. The cards will be randomized. The player will then choose which card/position that they think the king is. If the player is successful and chooses the right card, they will advance to the next round. As the round goes up, so will the speed of randomizing and cards that are displayed.
+Description: player collect a set amount of squares without hitting a bomb. Once the set amount of squares have been collected, the player will advance to the next round. If a bomb has been clicked the player must restart. There are 3 rounds total. There will be more bombs as the rounds go up.
+
+1. create a grid
+2. create buttons for the grid  
