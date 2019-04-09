@@ -52,13 +52,17 @@ let placeBomb = () => {
   }
 }
 placeBomb()
-console.log(grid);
-  //define coordinates with object
-  //create bomb counter
-  //create bomb
-  //randomize and set one bomb per coordinate
-  //increment bomb counter
 
+  let placeHeart = () => {
+    let counter = 1
+    while (counter <= 2) {
+      let randomCoord = coordinates[Math.floor(Math.random() * coordinates.length)]
+      grid[randomCoord] = "heart"
+      counter++
+    }
+  }
+placeHeart()
+console.log(grid);
 
 
 
