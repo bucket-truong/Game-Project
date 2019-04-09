@@ -1,0 +1,22 @@
+td {
+  border: 1px solid black;
+  height: 40px;
+  text-align: center;
+}
+#container {
+  height:300px;
+  width:300px;
+  margin:auto;
+  padding-top:40px;
+}
+#container-bg {
+  background-color: grey;
+  width:40%;
+  width:30%;
+  margin:auto;
+}
+#header {
+  text-align: center;
+  height: 50px;
+  font-size:40px;
+}
