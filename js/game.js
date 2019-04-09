@@ -59,7 +59,9 @@ $(document).ready(() => {
     let value = grid[selected]
     if (value == "bomb") {
       $('#' + selected).css("background-color", "red")
-
+      $('#' + selected).prepend('<img id="bombImg" src="http://static.tumblr.com/cd690c169335f1e32ecc343e4df6aad6/9t1hnhw/R3Lmzvusg/tumblr_static_bomb.gif" />')
+      let bomb = new Audio("http://www.cs.sfu.ca/CourseCentral/166/johnwill/_downloads/kaboom.wav")
+      bomb.play()
       if(player.lives <= 1) {
         alert('Bomb Hit, You Lose')
         reset()
@@ -67,6 +69,9 @@ $(document).ready(() => {
       player.lives -= 1
     } else if (value == "heart") {
       $('#' + selected).css("background-color", "pink")
+      $('#' + selected).prepend('<img id="heartImg" src="http://24.media.tumblr.com/48d1a696f1fec2bc4f852742b73ccf13/tumblr_ml0t2hs4gB1rgpyeqo1_400.gif" />')
+      let life = new Audio("http://web.fi.uba.ar/~icarballeda/mario/sounds/1-up.mp3")
+      life.play()
 
       if (player.lives < 3) {
         player.lives += 1
@@ -74,7 +79,11 @@ $(document).ready(() => {
     } else {
       if (player.score < 10) {
         $('#' + selected).css("background-color", "#00af14")
+        $('#' + selected).prepend('<img id="coinImg" src="https://edh-site-builder.cdn.prismic.io/edh-site-builder%2F03c5dc9f-ff4b-4fb6-84cd-8577b3b7c52d_coin.gif" />')
+        let coin = new Audio("http://www.superluigibros.com/downloads/sounds/GAMECUBE/SUPERMARIOSUNSHINE/WAV/coin.wav")
+        coin.play()
         player.score += 1
+
       } else {
         alert("round won")
       }
