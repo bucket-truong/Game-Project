@@ -10,4 +10,4 @@ Description: Player starts with 3 lives and the player must collect a set amount
 7. add style and animation
 8. adv to next level
 
-![Alt text](Screen Shot 2019-04-09 at 10.13.24 PM.png)
+<img width="1012" alt="wireframe" src="https://user-images.githubusercontent.com/48306562/55851801-7f528280-5b17-11e9-83de-5a272811a10c.png">
