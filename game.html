@@ -7,13 +7,13 @@
   </head>
   <body>
 
-    <div class="popup">
+    <!-- <div id="modal" class="popup">
       <div class="message">
         <h2>You Won! Play Again?</h2>
         <button class="Yes"></button>
         <button class="no"></button>
       </div>
-    </div>
+    </div> -->
 
     <div id="header">
       Game
@@ -24,7 +24,7 @@
       </div>
 
 <div id="container-bg">
-<button type="submit" id="restart">Restart</button>
+<button type="submit" id="mainBtn"class="restart">Restart</button>
   <div id="container">
     <table style="width:100%">
   <tr>
@@ -78,8 +78,19 @@
   </table>
  </div>
 </div>
+
+
+<div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <h1>You Won!</h1>
+    <button type="submit" id="modalBtn" class="restart">Restart</button>
+  </div>
+
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/game.js"></script>
-
   </body>
 </html>

@@ -25,7 +25,7 @@ td:hover {
   font-size:40px;
   font-family: 'Orbitron', sans-serif;
 }
-button {
+#mainBtn {
   background-color: #00af14;
   border-radius: 30px;
   font-size: 20px;
@@ -76,4 +76,39 @@ button:hover {
   max-width: 100%;
   max-height: 100%;
   height: auto;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 25%;
+  top: 10%;
+  width: 50%;
+  height: 500px;
+  overflow: auto;
+
+}
+
+
+.modal-content {
+  font-family: 'Orbitron', sans-serif;
+  text-align:center;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+#modalBtn {
+ background-color: #00af14;
+  border-radius: 30px;
+  font-size: 20px;
+  bottom:10%;
+  position:relative;
+  font-family: 'Orbitron', sans-serif;
+  border-color: black;
+  height:22px;
+  animation: shadow-pulse 1.5s infinite;
 }

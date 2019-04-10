@@ -85,8 +85,11 @@ $(document).ready(() => {
 
         } else {
           player.score += 1
-          
-          // setTimeout( () => {alert("round won") }, 1000)
+          $('#myModal').css('display', 'block')
+          $('#restart').on('click',() => {
+            reset()
+          })
+
         }
       }
       displayAttr()
@@ -124,21 +127,11 @@ let displayAttr = () => {
 }
 displayAttr()
 
-$('#restart').on('click',() => {
+$('.restart').on('click',() => {
   reset()
 })
 
 let reset = () => {
   location.reload()
 }
-
-
-//
-
-
-
-
-
-
-
 })
