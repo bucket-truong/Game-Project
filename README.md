@@ -9,3 +9,5 @@ Description: Player starts with 3 lives and the player must collect a set amount
 6. create game attributes
 7. add style and animation
 8. adv to next level
+
+![Alt text](Screen Shot 2019-04-09 at 10.13.24 PM.png)
